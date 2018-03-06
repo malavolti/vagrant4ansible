@@ -11,7 +11,7 @@
 2. Move on the "```vagrant4ansible```" directory extracted.
    * ```cd /opt/vagrant4ansible```
 3. Install the Guest Additions with "```vagrant plugin install vagrant-vbguest```"
-4. Install the Vagrant plugin to resize hard disk (50GB): "```vagrant plugin install vagrant-disksize```"
+4. Install the Vagrant plugin to resize hard disk (10GB): "```vagrant plugin install vagrant-disksize```"
 5. Run "```vagrant up```" command to instance the Development Environment.
 6. Change your own "```/etc/hosts```" (Linux) or "```C:\Windows\System32\drivers\etc\hosts```" (Windows) and add a name for you Development Environment:
 
