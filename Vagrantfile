@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
   #config.vm.box = "base"
   #config.vm.box = "debian/jessie64"
   config.vm.box = "debian/stretch64"
-  config.disksize.size = '50GB'
+  config.disksize.size = '10GB'
   
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -59,7 +59,7 @@ Vagrant.configure("2") do |config|
   
     # Customize the amount of memory on the VM:
     vb.memory = "2048"
-	 vb.cpus = "1"
+    vb.cpus = "1"
   end
   
   # This is the username that Vagrant will use when attempting any sort of SSH-based communication with the VM.
@@ -73,10 +73,10 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
-	 apt-get upgrade -y
+    apt-get upgrade -y
     apt-get install -y vim python-setuptools git
-	 easy_install pip
-	 pip install ansible
+    easy_install pip
+    pip install ansible
     pip install -U pyopenssl
     mkdir /root/.ssh
     cp /media/vagrant-data/ssh/* /root/.ssh
