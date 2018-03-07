@@ -17,7 +17,7 @@
 
     ```192.168.33.10  idp.example.org```
    
-7. Now you are able to access to the Development Environment Server "```idp.example.org```" (192.168.33.10) with "```root```" as username and your own SSH Key from Putty, MobaXTerm, Babun, ... 
+7. Now you are able to access to the Development Environment Server "```idp.example.org```" (192.168.33.10) with "```vagrant```" as username and your own SSH Key from Putty, MobaXTerm, Babun, ... 
    and it will possible to see your Apache2 sites directly from your preferred Browser Internet (Chrome, FireFox, Opera, ...)
 
 ## Useful Commands
