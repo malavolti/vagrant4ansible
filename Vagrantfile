@@ -79,9 +79,5 @@ Vagrant.configure("2") do |config|
     easy_install pip
     pip install ansible
     pip install -U pyopenssl
-    mkdir /root/.ssh
-    cp /media/vagrant-data/ssh/* /root/.ssh
-    chmod 400 /root/.ssh/id_rsa
-    chmod 644 /root/.ssh/id_rsa.pub /root/.ssh/authorized_keys
   SHELL
 end
