@@ -14,10 +14,10 @@
 4. Install the Vagrant plugin to resize hard disk (10GB): "```vagrant plugin install vagrant-disksize```"
 5. Run "```vagrant up```" command to instance the Development Environment.
 6. Change your own "```/etc/hosts```" (Linux) and add these 2 lines for the Development Environment:
-
-    ```192.168.33.10  idp.example.org```
-    ```192.168.34.10  sp.example.org```
-   
+   ```bash
+   192.168.33.10  idp.example.org
+   192.168.34.10  sp.example.org
+   ```
 7. Now you are able to access to the Development Environment Server "```idp.example.org```" (192.168.33.10) or "```sp.example.org```" (192.168.34.10) with "```vagrant ssh```" and it will possible to see your Apache2 sites directly from your preferred Browser Internet (Chrome, FireFox, Opera, ...)
    
 ## Istructions for Windows
@@ -28,11 +28,11 @@
 5. Install the Vagrant plugin to resize hard disk (10GB): "```vagrant plugin install vagrant-disksize```"
 6. Run "```vagrant up```" command to instance the Development Environment.
 7. Change your hosts file on "```C:\Windows\System32\drivers\etc\hosts```" (Windows) and add these 2 lines the Development Environment:
-
-    ```192.168.33.10  idp.example.org```
-    ```192.168.34.10  sp.example.org```
-   
-7. Now you are able to access to the Development Environment Server "```idp.example.org```" (192.168.33.10) or "```sp.example.org```" (192.168.34.10) and it will possible to see your Apache2 sites directly from your preferred Browser Internet (Chrome, FireFox, Opera, ...)
+   ```bash
+   192.168.33.10  idp.example.org
+   192.168.34.10  sp.example.org
+   ```
+8. Now you are able to access to the Development Environment Server "```idp.example.org```" (192.168.33.10) or "```sp.example.org```" (192.168.34.10) and it will possible to see your Apache2 sites directly from your preferred Browser Internet (Chrome, FireFox, Opera, ...)
 
 ## Useful Commands
 1. To shutdown the Development Environment use "```vagrant halt```" within the "```cmd```" prompt (Windows) or terminal (Linux/OSX)
