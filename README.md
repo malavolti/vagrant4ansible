@@ -16,9 +16,9 @@
 6. Change your own "```/etc/hosts```" (Linux) and add these 2 lines for the Development Environment:
    ```bash
    192.168.33.10  idp.example.org
-   192.168.34.10  sp.example.org
+   192.168.44.10  sp.example.org
    ```
-7. Now you are able to access to the Development Environment Server "```idp.example.org```" (192.168.33.10) or "```sp.example.org```" (192.168.34.10) with "```vagrant ssh```" and it will possible to see your Apache2 sites directly from your preferred Browser Internet (Chrome, FireFox, Opera, ...)
+7. Now you are able to access to the Development Environment Server "```idp.example.org```" (192.168.33.10) or "```sp.example.org```" (192.168.44.10) with "```vagrant ssh```" and it will possible to see your Apache2 sites directly from your preferred Browser Internet (Chrome, FireFox, Opera, ...)
    
 ## Istructions for Windows
 1. Download the Repository from: https://github.com/malavolti/vagrant4ansible/archive/master.zip
@@ -30,13 +30,15 @@
 7. Change your hosts file on "```C:\Windows\System32\drivers\etc\hosts```" (Windows) and add these 2 lines the Development Environment:
    ```bash
    192.168.33.10  idp.example.org
-   192.168.34.10  sp.example.org
+   192.168.44.10  sp.example.org
    ```
-8. Now you are able to access to the Development Environment Server "```idp.example.org```" (192.168.33.10) or "```sp.example.org```" (192.168.34.10) and it will possible to see your Apache2 sites directly from your preferred Browser Internet (Chrome, FireFox, Opera, ...)
+8. Now you are able to access to the Development Environment Server "```idp.example.org```" (192.168.33.10) or "```sp.example.org```" (192.168.44.10) and it will possible to see your Apache2 sites directly from your preferred Browser Internet (Chrome, FireFox, Opera, ...)
 
-## Useful Commands
+## Useful Commands (to use inside 'vagrant4ansible' dir)
 1. To shutdown the Development Environment use "```vagrant halt```" within the "```cmd```" prompt (Windows) or terminal (Linux/OSX)
 
 2. To reload the Development Environment use "```vagrant reload```" within the "```cmd```" prompt (Windows) or terminal (Linux/OSX)
 
 3. To destroy the Development Environment use "```vagrant destroy```" within the "```cmd```" prompt (Windows) or terminal (Linux/OSX)
+
+4. To use the Development Environment use "```vagrant ssh```" (to connect into the VM) and "```sudo su```" (to obtain ROOT access) within the "```cmd```" prompt (Windows) or terminal (Linux/OSX)
