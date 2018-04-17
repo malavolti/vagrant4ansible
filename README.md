@@ -8,12 +8,31 @@
 1. Retrieve GIT Repository:
    * ```sudo apt install git```
    * ```cd /opt/ ; git clone https://github.com/malavolti/vagrant4ansible``` 
+   or
+   * Download from ```https://github.com/malavolti/vagrant4ansible/archive/master.zip```
 2. Move on the "```vagrant4ansible```" directory extracted.
    * ```cd /opt/vagrant4ansible```
 3. Install the Guest Additions with "```vagrant plugin install vagrant-vbguest```"
 4. Install the Vagrant plugin to resize hard disk (10GB): "```vagrant plugin install vagrant-disksize```"
 5. Run "```vagrant up```" command to instance the Development Environment.
 6. Change your own "```/etc/hosts```" (Linux) and add these 2 lines for the Development Environment:
+   ```bash
+   192.168.33.10  idp.example.org
+   192.168.44.10  sp.example.org
+   ```
+7. Now you are able to access to the Development Environment Server "```idp.example.org```" (192.168.33.10) or "```sp.example.org```" (192.168.44.10) with "```vagrant ssh```" and it will possible to see your Apache2 sites directly from your preferred Browser Internet (Chrome, FireFox, Opera, ...)
+
+## Istructions for MacOSX
+1. Retrieve GIT Repository:
+   * ```cd Desktop ; git clone https://github.com/malavolti/vagrant4ansible``` 
+   or
+   * Download from ```https://github.com/malavolti/vagrant4ansible/archive/master.zip```
+2. Move on the "```vagrant4ansible```" directory extracted.
+   * ```cd /opt/vagrant4ansible```
+3. Install the Guest Additions with "```vagrant plugin install vagrant-vbguest```"
+4. Install the Vagrant plugin to resize hard disk (10GB): "```vagrant plugin install vagrant-disksize```"
+5. Run "```vagrant up```" command to instance the Development Environment.
+6. Change your own "```sudo vi /private/etc/hosts```" and add these 2 lines for the Development Environment:
    ```bash
    192.168.33.10  idp.example.org
    192.168.44.10  sp.example.org
