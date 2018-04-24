@@ -1,8 +1,8 @@
 # HOWTO Configure Development Environment
 
 ## Requirements to install before the next instructions
-* Vagrant: https://www.vagrantup.com/downloads.html     (Tested with 2.0.3)
-* Virtualbox: https://www.virtualbox.org/wiki/Downloads (Tested with 5.2.10)
+* Vagrant: https://www.vagrantup.com/downloads.html     (Tested with v2.0.3 and v2.0.4)
+* Virtualbox: https://www.virtualbox.org/wiki/Downloads (Tested with v5.2.10)
 
 ## Istructions for Linux
 1. Retrieve GIT Repository:
