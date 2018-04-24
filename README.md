@@ -6,10 +6,11 @@
 
 ## Istructions for Linux
 1. Retrieve GIT Repository:
-   * ```sudo apt install git```
+   * ```sudo su -```
+   * ```apt install git```
    * ```cd /opt/ ; git clone https://github.com/malavolti/vagrant4ansible``` 
    or
-   * Download from ```https://github.com/malavolti/vagrant4ansible/archive/master.zip```
+   * Download from ```https://github.com/malavolti/vagrant4ansible/archive/master.zip``` into ```/opt``` directory
 2. Move on the "```vagrant4ansible```" directory extracted.
    * ```cd /opt/vagrant4ansible```
 3. Install the Guest Additions with "```vagrant plugin install vagrant-vbguest```"
