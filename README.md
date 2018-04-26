@@ -51,6 +51,27 @@
    ```
 8. Now you are able to access to the Development Environment Server "```idp.example.org```" or "```sp.example.org```" and it will possible to see your Apache2 sites directly from your preferred Browser Internet (Chrome, FireFox, Opera, ...)
 
+### Verify
+
+**To be done on the host (computer with Virtualbox and vagrant)**
+
+Run your favorite browser, check the following links verifing the correct result.
+**NOTE:** Server's certificate are self-signed, so they must be accepted manually from browser windows.
+
+* LINK: https://idp.example.org
+  CONTENT: `Virtualhost idp.example.org configurato correttamente`
+* LINK: https://sp.example.org
+  CONTENT: `Virtualhost sp.example.org configurato correttamente`
+* LINK: https://idp.example.org/idp
+  CONTENT: Jetty error page like `HTTP Status 404 - /idp`
+* LINK: https://sp.example.org/secure
+  CONTENT: Shibboleth mismatch page `shibsp::ConfigurationException`
+
+In case all test test are successfull, ... COMPLIMENTS! 
+
+In case of problem, please send us a mail or track an issues using github:
+  https://github.com/malavolti/vagrant4ansible/issues
+
 ## Useful Commands (to use inside 'vagrant4ansible' dir)
 1. To shutdown the Development Environment use "```vagrant halt```" within the "```cmd```" prompt (Windows) or terminal (Linux/OSX)
 
