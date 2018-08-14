@@ -73,11 +73,12 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
-    apt-get upgrade -y
-    apt-get install -y vim python-setuptools git
-    easy_install pip
-    pip install ansible
-    pip install -U pyopenssl
+    apt-get upgrade --yes
+    apt-get install -y vim git python-dev
+    cd /usr/local/src
+    wget https://bootstrap.pypa.io/get-pip.py 
+    python get-pip.py --prefix=/usr/local
+    pip install --upgrade --force-reinstall ansible pyopenssl
     sed -i -e 's/"syntax on/syntax on/g' /etc/vim/vimrc
   SHELL
 end
