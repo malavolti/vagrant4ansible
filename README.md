@@ -79,3 +79,20 @@ In case of problem, please send us a mail or track an issues using github:
 3. To destroy the Development Environment use "```vagrant destroy```" within the "```cmd```" prompt (Windows) or terminal (Linux/OSX)
 
 4. To use the Development Environment use "```vagrant ssh```" (to connect into the VM) and "```sudo su```" (to obtain ROOT access) within the "```cmd```" prompt (Windows) or terminal (Linux/OSX)
+
+5. To manage Snapshot in Vagrant
+   1. Move in the vagrant VM directory and create a snapshot called "NAME_SNAPSHOT":
+
+      ```vagrant snapshot save NAME_SNAPSHOT```
+
+   2. Recover your "```NAME_SNAPSHOT```":
+
+      ```vagrant snapshot restore NAME_SNAPSHOT```
+
+   3. (OPTIONAL) List Snapshot:
+
+      ```vagrant snapshot list```
+
+   4. (OPTIONAL) Remove Snapshot:
+
+      ```vagrant snapshot delete NOME_SNAPSHOT```
