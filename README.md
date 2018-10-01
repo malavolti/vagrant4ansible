@@ -95,4 +95,4 @@ In case of problem, please send us a mail or track an issues using github:
 
    4. (OPTIONAL) Remove Snapshot:
 
-      ```vagrant snapshot delete NOME_SNAPSHOT```
+      ```vagrant snapshot delete NAME_SNAPSHOT```
