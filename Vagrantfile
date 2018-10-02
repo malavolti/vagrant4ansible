@@ -73,14 +73,14 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
     apt-get upgrade --yes
-    apt-get install -y vim git python-dev
+    apt-get install -y vim git python-dev bash-completion
     cd /usr/local/src
     wget https://bootstrap.pypa.io/get-pip.py 
     python get-pip.py --prefix=/usr/local
     pip install --upgrade --force-reinstall ansible pyopenssl
     sed -i -e 's/"syntax on/syntax on/g' /etc/vim/vimrc
-    echo "192.168.33.10 sp.example.org idp.example.org sp idp" >> /etc/hosts    
+    printf "\n192.168.33.10 sp.example.org idp.example.org sp idp\n" >> /etc/hosts
     hostnamectl set-hostname idp
-    print "if [ -f /etc/bash_completion ]; then\n . /etc/bash_completion\nfi"
+    print "\nif [ -f /etc/bash_completion ]; then\n . /etc/bash_completion\nfi" >> /etc/profile
   SHELL
 end
