@@ -79,8 +79,8 @@ Vagrant.configure("2") do |config|
     python get-pip.py --prefix=/usr/local
     pip install --upgrade --force-reinstall ansible pyopenssl
     sed -i -e 's/"syntax on/syntax on/g' /etc/vim/vimrc
-    printf "\n192.168.33.10 sp.example.org idp.example.org sp idp\n" >> /etc/hosts
+    printf "\n192.168.33.10 dev.example.org dev\n" >> /etc/hosts
     hostnamectl set-hostname idp
-    print "\nif [ -f /etc/bash_completion ]; then\n . /etc/bash_completion\nfi" >> /etc/profile
+    printf "\nif [ -f /etc/bash_completion ]; then\n . /etc/bash_completion\nfi" >> /etc/profile
   SHELL
 end
