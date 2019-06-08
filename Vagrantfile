@@ -74,7 +74,9 @@ Vagrant.configure("2") do |config|
     export DEBIAN_FRONTEND=noninteractive
     apt-get update
     apt-get upgrade --yes
-    apt-get install -y vim git python-dev bash-completion
+    apt-get install -y python3-pip libffi-dev libssl-dev git vim python3-dev bash-completion
+    pip install --upgrade pip
+    pip install --upgrade --force-reinstall wheel setuptools pyopenssl ansible
     cd /usr/local/src
     wget https://bootstrap.pypa.io/get-pip.py 
     python get-pip.py --prefix=/usr/local
