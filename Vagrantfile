@@ -74,13 +74,9 @@ Vagrant.configure("2") do |config|
     export DEBIAN_FRONTEND=noninteractive
     apt-get update
     apt-get upgrade --yes
-    apt-get install -y python3-pip libffi-dev libssl-dev git vim python3-dev bash-completion
+    apt-get install -y python3-dev python3-pip libffi-dev libssl-dev git vim bash-completion
     pip install --upgrade pip
     pip install --upgrade --force-reinstall wheel setuptools pyopenssl ansible
-    cd /usr/local/src
-    wget https://bootstrap.pypa.io/get-pip.py 
-    python get-pip.py --prefix=/usr/local
-    pip install --upgrade --force-reinstall ansible pyopenssl
     sed -i -e 's/"syntax on/syntax on/g' /etc/vim/vimrc
     printf "\n192.168.33.10 dev.example.org dev\n" >> /etc/hosts
     hostnamectl set-hostname idp
