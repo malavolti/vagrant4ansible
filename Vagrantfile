@@ -74,7 +74,7 @@ Vagrant.configure("2") do |config|
     export DEBIAN_FRONTEND=noninteractive
     apt-get update
     apt-get upgrade --yes
-    apt-get install -y python3-dev python3-pip libffi-dev libssl-dev dirmngr git vim bash-completion
+    apt-get install -y python3-dev python3-pip python3-setuptools python3-apt libffi-dev libssl-dev dirmngr git vim bash-completion
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8B48AD6246925553 EF0F382A1A7B6500 7638D0442B90D010
     pip install --upgrade pip
     pip install --upgrade --force-reinstall wheel setuptools pyopenssl ansible
