@@ -22,6 +22,12 @@
    ```
 7. Now you are able to access to the Development Environment Server "```idp.example.org```" or "```sp.example.org```" with "```vagrant ssh```" and it will possible to see your Apache2 sites directly from your preferred Browser Internet (Chrome, FireFox, Opera, ...)
 
+8. If you need to run Ansible only for the machine you have downloaded, add these lines on the Vagrant file:
+   ```bash
+   mkdir /etc/ansible
+   echo "localhost	ansible_connection=local" > /etc/ansible/hosts
+   ```
+
 ## Istructions for MacOSX
 1. Retrieve GIT Repository:
    * ```cd Desktop ; git clone https://github.com/malavolti/vagrant4ansible``` 
@@ -36,6 +42,12 @@
    192.168.33.10  idp.example.org sp.example.org  idp sp
    ```
 7. Now you are able to access to the Development Environment Server "```idp.example.org```" or "```sp.example.org```" with "```vagrant ssh```" and it will possible to see your Apache2 sites directly from your preferred Browser Internet (Chrome, FireFox, Opera, ...)
+
+8. If you need to run Ansible only for the machine you have downloaded, add these lines on the Vagrant file:
+   ```bash
+   mkdir /etc/ansible
+   echo "localhost	ansible_connection=local" > /etc/ansible/hosts
+   ```
    
 ## Istructions for Windows
 1. Download the Repository from: https://github.com/malavolti/vagrant4ansible/archive/master.zip
@@ -50,6 +62,11 @@
    ```
 8. Now you are able to access to the Development Environment Server "```idp.example.org```" or "```sp.example.org```" and it will possible to see your Apache2 sites directly from your preferred Browser Internet (Chrome, FireFox, Opera, ...)
 
+9. If you need to run Ansible only for the machine you have downloaded, add these lines on the Vagrant file:
+   ```bash
+   mkdir /etc/ansible
+   echo "localhost	ansible_connection=local" > /etc/ansible/hosts
+   ```
 ### Verify
 
 **To be done on the host (computer with Virtualbox and vagrant)**
