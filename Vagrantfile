@@ -13,9 +13,8 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   #config.vm.box = "base"
-  config.vm.box = "debian/jessie64"
-  config.disksize.size = "10GB"
-  
+  config.vm.box = "generic/debian10"
+ 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
@@ -74,13 +73,15 @@ Vagrant.configure("2") do |config|
     export DEBIAN_FRONTEND=noninteractive
     apt-get update
     apt-get upgrade --yes
-    apt-get install -y python3-dev python3-pip python3-setuptools python3-apt libffi-dev libssl-dev dirmngr git vim bash-completion
-    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8B48AD6246925553 EF0F382A1A7B6500 7638D0442B90D010
-    pip install --upgrade pip
-    pip install --upgrade --force-reinstall wheel setuptools pyopenssl ansible
+    apt-get install --yes bash-completion python3-dev python3-pip python3-setuptools python3-apt libffi-dev libssl-dev dirmngr git vim
+    git config --global core.editor "vim"
+    APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8B48AD6246925553
+    APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EF0F382A1A7B6500
+    APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7638D0442B90D010
+    pip3 install --upgrade --force-reinstall wheel setuptools pyopenssl ansible
     sed -i -e 's/"syntax on/syntax on/g' /etc/vim/vimrc
-    printf "\n192.168.33.10 dev.example.org dev\n" >> /etc/hosts
-    hostnamectl set-hostname idp
+    printf "\n192.168.33.10 vm.example.org vm\n" >> /etc/hosts
+    hostnamectl set-hostname vm
     printf "\nif [ -f /etc/bash_completion ]; then\n . /etc/bash_completion\nfi" >> /etc/profile
   SHELL
 end
